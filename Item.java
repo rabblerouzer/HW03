@@ -42,8 +42,20 @@ public class Item {
 	    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");	 
 	    this.date = dateFormat.format(date);
 	}
+	public Item(String name, String url, String initialPrice, float initPrice, String currentPrice, float currPrice, String change) {
+		this.name = name;
+		this.url = url;
+		this.initialPrice = initialPrice;
+		this.initPrice = initPrice;
+		this.currentPrice = currentPrice;
+		this.currPrice = currPrice;
+		this.change = change;
+		Date date = new Date();
+	    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");	 
+	    this.date = dateFormat.format(date);
+	}
 	
-	public void setters(pricewatcher.PriceFinder find) {
+	public void setCurrPrice(pricewatcher.PriceFinder find) {
 		float initialValue = 200;
 		float currentValue = (float) find.PriceFinder("simulated");
 		float difference = ((currentValue/initialValue) * 100)-100;
@@ -53,5 +65,8 @@ public class Item {
 		this.currentPrice = currPrice;
 		String diff = Float.toString(difference);
 		this.change = diff;
+	}
+	public void setName(String name) {
+		
 	}
 }

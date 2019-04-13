@@ -16,6 +16,7 @@ class ItemManagerTest {
 		
 		assertEquals(0, itemManager.size());
 	}
+	/*
 	@Test
 	void testAddItem() {
 		Item item = itemManager.addItem("TV","someurl", 200);
@@ -35,5 +36,6 @@ class ItemManagerTest {
 		assertEquals("someurl", item.url);
 		assertEquals(200, item.currentPrice);
 	}
+	*/
 
 }

@@ -88,7 +88,7 @@ public class Main extends JFrame {
     	 
     	ItemView item = new ItemView();
     	PriceFinder find = new PriceFinder();
-    	item.item.setters(find);
+    	item.item.setCurrPrice(find);
     	configureUI();
     	if(item.item.currPrice < item.item.initPrice) {
     		play(getCodeBase(), "sound/yes-2.wav");
